@@ -1,0 +1,15 @@
+Main BG
+rgb(92,219,149)
+Header BG
+rgb(55,150,131)
+Border 
+rgb(142,228,175)
+Text 
+rgb(237,245,225)
+Links
+rgb(5,56,107)
+
+Image Book Pages
+rgb(239,236,217)
+Book Binder
+rgb(33,83,144)

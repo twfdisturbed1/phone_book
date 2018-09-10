@@ -1,0 +1,46 @@
+<center>
+<table border="1">
+	<tr bgcolor="#215390">
+		<th bgcolor="#215390"><font color="FFFFFF">Contact #</font></th>
+		<th bgcolor="#215390"><font color="FFFFFF">First Name</font></th>
+		<th bgcolor="#215390"><font color="FFFFFF">Last Name</font></th>
+		<th bgcolor="#215390"><font color="FFFFFF">Address</font></th>
+		<th bgcolor="#215390"><font color="FFFFFF">City</font></th>
+		<th bgcolor="#215390"><font color="FFFFFF">State</font></th>
+		<th bgcolor="#215390"><font color="FFFFFF">Zip Code</font></th>
+		<th bgcolor="#215390"><font color="FFFFFF">Phone Number</font></th>
+		<th bgcolor="#215390"><font color="FFFFFF">Notes </font></th>
+	</tr>
+  	<tr>
+		<td>01</td>
+		<td>Bob</td>
+		<td>Dole</td>
+		<td>123 Fake Street</td>
+		<td>Man</td>
+		<td>WV</td>
+		<td>25635</td>
+		<td>1(304)583-0106</td>
+		<td>Fake Person</td>
+  	</tr>
+</table>
+</center>
+<form method="post" action="phone">
+        <p> Please Enter your information</p><br>
+	<input type="text" pattern=".{2,}" name="contact_num" placeholder="Contact #" required>	
+	<br>	
+	<input type="text" pattern=".{2,}" name="f_name" placeholder="First Name" required>	
+	<br>
+	<input type="text" pattern=".{2,}" name="l_name" placeholder="Last Name" required>
+	<br>
+	<input type="text" pattern=".{8,}" name="address" placeholder="Street Address" required>
+	<br>
+	<input type="text" pattern=".{2,}" name="city" placeholder="City" required>
+	<br>
+	<input type="text" pattern=".{2,}" name="state" placeholder="State" required>
+	<br>
+	<input type="number" pattern=".{5,}" name="zip" placeholder="Zip Code" required>
+	<br>
+	<input type="number" pattern=".{10,}" name="p_number" placeholder="Phone Number" required>				
+	<br>
+	<input type="submit" value="Add Contact">
+</form>

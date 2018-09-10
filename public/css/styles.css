@@ -1,0 +1,245 @@
+  * {
+      box-sizing: border-box;
+  }
+ 
+  @font-face {
+    font-family: "LeagueSpartan-Bold";
+    src: url(/fonts/LeagueSpartan-Bold.ttf) format("truetype");
+}
+h2.customfont { 
+    font-family: "LeagueSpartan-Bold", Verdana, Tahoma;
+}
+h1.customfont { 
+    font-family: "LeagueSpartan-Bold", Verdana, Tahoma;
+}
+h3.customfont { 
+    font-family: "LeagueSpartan-Bold", Verdana, Tahoma;
+}
+
+  body {
+      background: rgb(92,219,149);
+      background: url("/images/booksbg.jpeg")no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      font-family: 'Libre Baskerville', serif;
+      color: #000000;
+  }
+  * {
+    box-sizing: border-box;
+}
+header {
+    background-color: rgba(33,83,144,0.9);
+    padding: 0px;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(237,245,225);
+    border: rgb(5,56,107);
+    border-style: solid;
+    width: 75%
+}
+
+nav {
+    display: inline-block;
+    width: 75%;
+    background: rgb(33,83,144);
+    padding: 0px;
+    border: rgb(5,56,107);
+    border-style: solid;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+article {
+    padding: 5px;
+    content: 5px;
+    width: 75%;
+    text-align: center;
+    background-color: rgba(239,236,217,0.9);
+    height: auto;
+    border: rgb(33,83,144);
+    border-style:solid;
+}
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    background-color: rgba(33,83,144,1.0);
+    padding: 10px;
+    text-align: center;
+    color: rgb(237,245,225);
+    border: rgb(5,56,107);
+    border-style: solid;
+    width: 75%
+}
+
+@media (max-width: 600px) {
+    nav,
+    article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+a:link {
+    color: rgb(33,83,144);
+}
+
+a:visited {
+    color: rgb(33,83,144);
+}
+
+a:hover {
+    color: rgb(0, 98, 196);
+}
+
+a:active {
+    color: rgb(206, 206, 206);
+}
+
+input[type=number] {
+    border: 2px solid rgb(5,56,107);
+    border-radius: 4px;
+    background-color: rgb(239,236,217);
+    color: rgb(5,56,107);
+    font-size: 12px;
+    size: 12px;
+    width: 90px;
+}
+
+input[type=text] {
+    border: 2px solid rgb(5,56,107);
+    border-radius: 4px;
+    background-color: rgb(239,236,217);
+    color: rgb(5,56,107);
+    font-size: 12px;
+    size: 5px;
+    width: 149px;
+}
+
+
+input[type=password] {
+    border: 2px solid rgb(5,56,107);
+    border-radius: 4px;
+    background-color: rgb(239,236,217);
+    color: rgb(5,56,107);
+    font-size: 12px;
+}
+
+input[type=submit] {
+    background-color: rgb(33,83,144);
+    border-style: groove;
+    border: 2px solid rgb(5,56,107);
+    color: rgb(237,245,225);
+    padding: 16px 32px;
+    text-decoration: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 4px;
+}
+
+.center {
+    padding: 70px 0;
+}
+
+.total {
+    font-size: 12px;
+}
+
+ ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(33,83,144);
+    opacity: 1;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(33,83,144);
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(33,83,144);
+}
+/* Style The Dropdown Button */
+
+.dropbtn {
+    background-color: rgb(33,83,144);
+    color: rgb(237,245,225);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(33,83,144);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: rgb(239,236,217);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: rgb(55, 128, 218);
+}
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(55, 128, 218);
+}
+
+.buttonStyle:hover {
+    background: rgba(55, 128, 218,0.7);
+}
+
+table, th, td, tr{
+    border: 1px solid rgb(55, 128, 218);
+    border-collapse: collapse; 
+}
+#box {
+    margin: auto;
+    opacity: .8;
+    word-wrap: break-word;
+    padding-top: 20px;
+    width: 75%;
+    text-align: center;
+    min-height: 100%;
+    max-height: fit-content;
+    padding-bottom: 25px;
+  }
+  .makesmall {
+    font-size: 12px;
+  }

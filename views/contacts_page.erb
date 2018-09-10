@@ -1,0 +1,77 @@
+
+		<body>
+			<h3><%=loginname%>'s</h3>
+			<h1>Phone Book</h1>
+			<img width="180px" height="180px" src="/images/phonebook.png">
+			<hr>
+			<h2>Contact Info</h2>
+			<form method="post" action="contacts_page_update">
+			<left>	<table width="75%">
+                        <tr bgcolor="#215390">
+                            <th bgcolor="#215390"><font class="makesmall" color="FFFFFF" >#</font></th>
+                            <th bgcolor="#215390"><font class="makesmall" color="FFFFFF" >First Name</font></th>
+                            <th bgcolor="#215390"><font class="makesmall" color="FFFFFF"> Last Name</font></th>
+                            <th bgcolor="#215390"><font class="makesmall" color="FFFFFF"> Address</font></th>
+                            <th bgcolor="#215390"><font class="makesmall" color="FFFFFF"> City</font></th>
+                            <th bgcolor="#215390"><font class="makesmall" color="FFFFFF"> State</font></th>
+                            <th bgcolor="#215390"><font class="makesmall" color="FFFFFF"> Zip Code</font></th>
+                            <th bgcolor="#215390"><font class="makesmall" color="FFFFFF"> Phone Number</font></th>
+                            <th bgcolor="#215390"><font class="makesmall" color="FFFFFF"> Notes </font></th>
+                        </tr>
+				 	<%counter = 1%>
+				 	<%info.each do |stuff|%>			 		
+					 	<tr>
+					 		<td><%=counter%>
+					 		<input hidden name="index_arr[]" value="<%=stuff[0][0]%>">
+					 		<input hidden name="number_arr[]" value="<%=counter%>"></td>
+					 		<td><input type="text" name="FName_arr[]" value="<%=stuff[1][0]%>" minlength="2" maxlength="15" pattern="[a-zA-Z0-9\s]+" title="No Special Characters" required></td>
+                            <td><input type="text" name="LName_arr[]" value="<%=stuff[2][0]%>" minlength="2" maxlength="15" pattern="[a-zA-Z0-9\s]+" title="No Special Characters" required></td>
+							<td><input type="text" name="Address_arr[]" value="<%=stuff[3][0]%>" maxlength="45" pattern="[a-zA-Z0-9\s]+" title="No Special Characters"></td>
+							<td><input type="text" name="City_arr[]" value="<%=stuff[4][0]%>" maxlength="20" pattern="[a-zA-Z0-9\s]+" title="No Special Characters"></td>				 		
+							<td><input type="text" name="State_arr[]" value="<%=stuff[5][0]%>"></td>
+                            <td><input type="number" name="ZipCode_arr[]" value="<%=stuff[6][0]%>" minlength="5" maxlength="10" pattern="[0-9]+" title="Only Numbers" required></td>
+                            <td><input type="number" name="PNumber_arr[]" value="<%=stuff[7][0]%>" minlength="7" maxlength="11" pattern="[0-9]+" title="Only Numbers" required></td>
+                            <td><input type="text" name="Notes_arr[]" value="<%=stuff[8][0]%>"  maxlength="200" pattern="[a-zA-Z0-9\s]+" title="Notes" ></td>
+                         </tr>
+					 	<%counter += 1%>						
+				 	<%end%>
+		 		</table><br></left>
+		 		<input class="button" type="submit" value="Update Info">
+		 	</form>
+		 	<hr>
+		 	<h2>Add Contact</h2>
+			<form method="post" action="contacts_page_add">
+				<input hidden name="number" value="<%=counter%>">
+				<input type="text" name="FName" placeholder="First Name" maxlength="30" pattern="[a-zA-Z0-9\s]+" title="No Special Characters" required>
+                <input type="text" name="LName" placeholder="Last Name" maxlength="30" pattern="[a-zA-Z0-9\s]+" title="No Special Characters" required><br>
+				<input type="text" name="Address" placeholder="Address" maxlength="45" pattern="[a-zA-Z0-9\s]+" title="No Special Characters">
+				<input type="text" name="City" placeholder="City" maxlength="45" pattern="[a-zA-Z0-9\s]+" title="No Special Characters">
+    			<input type="text" name="State" placeholder="State" maxlength="45" pattern="[a-zA-Z0-9\s]+" title="No Special Characters">
+    			<input type="text" name="ZipCode" placeholder="Zip Code" maxlength="45" pattern="[a-zA-Z0-9\s]+" title="No Special Characters"><br>
+				<input type="text" name="PNumber" placeholder="Phone Number" maxlength="20" pattern="[a-zA-Z0-9\s]+" title="No Special Characters">
+                <input type="text" name="Notes" placeholder="Notes" maxlength="45" pattern="[a-zA-Z0-9\s]+" title="No Special Characters"><br><br>
+                <input class="button" type="submit" value="Add Info">				
+			</form>
+			<hr>
+			<h2>Delete Contact</h2>
+		 	<form method="post" action="contacts_page_delete">
+		 		<a>Enter Index Number of Contact to Delete: </a><br><br>
+		 		<%counter -= 1%>
+		 		<input type="number" name="number" pattern="[0-9]+" title="Only Numbers" min="1" max="<%=counter%>" required><br><br>
+		 		<%counter = 1%>
+				<%info.each do |stuff|%>			 						 		
+				 	<input hidden name="index_arr[]" value="<%=stuff[0][0]%>">
+				 	<input hidden name="number_arr[]" value="<%=counter%>">
+					<input hidden name="FName_arr[]" value="<%=stuff[1][0]%>">
+					<input hidden name="LName_arr[]" value="<%=stuff[2][0]%>">
+			 		<input hidden name="Address_arr[]" value="<%=stuff[3][0]%>">
+					<input hidden name="City_arr[]" value="<%=stuff[4][0]%>">
+                    <input hidden name="State_arr[]" value="<%=stuff[5][0]%>">
+                    <input hidden name="ZipCode_arr[]" value="<%=stuff[6][0]%>">
+                    <input hidden name="PNumber_arr[]" value="<%=stuff[7][0]%>">
+                    <input hidden name="Notes_arr[]" value="<%=stuff[8][0]%>">				 		
+					<%counter += 1%>						
+			 	<%end%>
+		 		<input class="button" type="submit" value="Delete Contact">
+		 	</form>
+		</body>
